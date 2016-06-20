@@ -1,0 +1,2 @@
+# mySqlGarden
+lets learn mySQL
