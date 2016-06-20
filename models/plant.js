@@ -2,7 +2,7 @@
 module.exports = function(sequelize, DataTypes) {
   var plant = sequelize.define('plant', {
     name: DataTypes.STRING,
-    number: DataTypes.INTEGER,
+    color: DataTypes.STRING,
     edible: DataTypes.BOOLEAN
   }, {
     classMethods: {
