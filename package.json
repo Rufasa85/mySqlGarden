@@ -1,0 +1,25 @@
+{
+  "name": "mySqlGarden",
+  "version": "0.0.0",
+  "description": "lets learn mySQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Rufasa85/mySqlGarden.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Rufasa85/mySqlGarden/issues"
+  },
+  "dependencies": {
+    "express-ejs-layouts": "~2.1.0",
+    "ejs": "~2.4.2",
+    "express": "~4.14.0",
+    "mysql": "~2.11.1",
+    "sequelize": "~3.23.3"
+  }
+}
