@@ -4,16 +4,33 @@ var db = require('../models');
 var request = require('request');
 
 router.get('/', function(req,res) {
-    res.render('gardens/index');
+    db.plant.findAll().then(function(plants) {
+        res.render('gardens/index', {plants:plants});
+    })
 })
 
 router.get('/new', function(req, res) {
     res.render('gardens/new');
 })
 
+router.post('/new', function(req,res) {
+    var edible = false;
+    if (req.body.edible === 'true') {
+        edible = true;
+    }
+    db.plant.create({
+        name:req.body.name,
+        color:req.body.color,
+        edible:edible
+    }).then(function(plant) {
+        res.redirect('/garden')
+    });
+})
 
 router.get('/:id', function(req,res) {
-    res.render('gardens/show');
+    db.plant.findById(req.params.id).then(function(plant){
+        res.render('gardens/show',{plant:plant});
+    })
 })
 
 
