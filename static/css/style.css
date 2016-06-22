@@ -6,14 +6,14 @@
     margin:10px;
     text-align: center;
 }
-.stem {
+.smallStem {
     display:inline-block;
     width:10px;
     height:100px;
     background-color: green;
     margin:0 auto;
 }
-.fruit {
+.smallFruit {
     position:absolute;
     top:30px;
     display:inline-block;
@@ -22,14 +22,44 @@
     border-radius:50px;
     background-color:salmon;
 }
-
-
 .smallPot {
     width: 100px;
     height: 100px;
     transform: perspective(10px) rotateX(-1deg);
     background-color: #96281B;
     color:white;
+}
+.bigPlant {
+    position: relative;
+    width: 400px;
+    margin:0 auto;
+    text-align: center;
+}
+.bigStem {
+    display:inline-block;
+    width:40px;
+    height:400px;
+    background-color: green;
+    margin:0 auto;
+}
+.bigFruit {
+    position:absolute;
+    top:120px;
+    display:inline-block;
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    background-color:salmon;
+}
+
+
+.bigPot {
+    width: 200px;
+    height: 200px;
+    transform: perspective(20px) rotateX(-2deg);
+    background-color: #96281B;
+    color:white;
+    margin:0 auto;
 }
 
 .smallPlant:hover {
