@@ -1,8 +1,69 @@
-.smallPlant {
+.smallPlant{
+    position: relative;
     display: inline-block;
-    border: 1px solid black;
+    width: 100px;
+    height: 200px;
+    margin:10px;
+    text-align: center;
+}
+.stem {
+    display:inline-block;
+    width:10px;
+    height:100px;
+    background-color: green;
+    margin:0 auto;
+}
+.fruit {
+    position:absolute;
+    top:30px;
+    display:inline-block;
+    width:25px;
+    height:25px;
+    border-radius:50px;
+    background-color:salmon;
+}
+
+
+.smallPot {
     width: 100px;
     height: 100px;
+    transform: perspective(10px) rotateX(-1deg);
+    background-color: #96281B;
+    color:white;
+}
+
+.smallPlant:hover {
+    opacity: 0.5;
+}
+
+.green {
+    border:none;
+    background-color: green;
+}
+
+.violet {
+    border:none;
+    background-color: purple;
+}
+
+.brown {
+    border:none;
+    background-color: brown;
+}
+
+.red {
+    border:none;
+    background-color: red;
+}
+
+.yellow {
+    border:none;
+    background-color: yellow;
+}
+
+.orange {
+    border:none;
+    background-color: orange;
 }
 
 .smallPlant p {
