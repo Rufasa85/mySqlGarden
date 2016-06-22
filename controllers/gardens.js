@@ -34,4 +34,12 @@ router.get('/:id', function(req,res) {
 })
 
 
+router.delete('/:id', function(req,res) {
+    db.plant.findById(req.params.id).then(function(plant) {
+        plant.destroy().then(function(){
+            res.send('deleted');
+        })
+    })
+})
+
 module.exports = router;

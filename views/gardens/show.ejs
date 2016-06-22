@@ -1,4 +1,13 @@
-<h1>This is the garden show page</h1>
+<h1 class = 'text-center'>Check out this sweet <%= plant.name %>!</h1>
+<div class = 'bigPlant'><div class = 'bigStem'></div><div class = 'bigFruit <%= plant.color %>'></div><div class = 'text-center bigPot'><p><%= plant.name %></p></div></div>
 <h3 class = 'text-center'>
-    <%= plant.name %>
+    <% if (plant.edible)  { %>
+        Delicious!
+    <% } %>
+    <% if (!plant.edible) { %>
+        Better not eat that!
+    <% } %>
 </h3>
+<button type="button" class="btn btn-default">Water</button>
+<button type="button" class="btn btn-default">Edit</button>
+<button type="button" class="btn btn-default" id='deleteBtn'>Delete</button>

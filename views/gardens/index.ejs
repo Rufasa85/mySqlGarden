@@ -1,5 +1,4 @@
 <h1 class='text-center'>What a beautiful garden!</h1>
 <% plants.forEach(function(plant){ %>
-    <div class = 'smallPlant'><div class = 'stem'></div><div class = 'fruit <%= plant.color %>'></div><div class = 'text-center smallPot'><p><%= plant.name %></p></div></div>
-    <% console.log(plant.name)  %>
+    <a href = '/garden/<%= plant.id %>'><div class = 'smallPlant'><div class = 'smallStem'></div><div class = 'smallFruit <%= plant.color %>'></div><div class = 'text-center smallPot'><p><%= plant.name %></p></div></div></a>
 <% })  %>
