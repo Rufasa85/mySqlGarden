@@ -33,6 +33,22 @@ router.get('/:id', function(req,res) {
     })
 })
 
+router.get('/:id/edit', function(req, res) {
+    db.plant.findById(req.params.id).then(function(plant){
+        res.render('gardens/edit', {plant:plant});
+    })
+})
+
+router.post('/:id/edit', function(req, res) {
+    db.plant.findById(req.params.id).then(function(plant) {
+        plant.name = req.body.name;
+        plant.color = req.body.color;
+        plant.edible = req.body.edible;
+        plant.save().then(function(){
+            res.redirect('/garden')
+        })
+    })
+})
 
 router.delete('/:id', function(req,res) {
     db.plant.findById(req.params.id).then(function(plant) {
