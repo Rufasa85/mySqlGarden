@@ -21,6 +21,7 @@ router.post('/new', function(req,res) {
     db.plant.create({
         name:req.body.name,
         color:req.body.color,
+        water:0,
         edible:edible
     }).then(function(plant) {
         res.redirect('/garden')
@@ -29,6 +30,7 @@ router.post('/new', function(req,res) {
 
 router.get('/:id', function(req,res) {
     db.plant.findById(req.params.id).then(function(plant){
+        console.log('water:',    plant.water)
         res.render('gardens/show',{plant:plant});
     })
 })
@@ -39,6 +41,15 @@ router.get('/:id/edit', function(req, res) {
     })
 })
 
+router.get('/:id/water', function(req, res) {
+    db.plant.findById(req.params.id).then(function(plant) {
+        if(plant.water<25) {
+            plant.water++;
+            plant.save();
+        }
+        res.redirect('/garden/' + plant.id);
+    })
+})
 router.post('/:id/edit', function(req, res) {
     db.plant.findById(req.params.id).then(function(plant) {
         plant.name = req.body.name;
