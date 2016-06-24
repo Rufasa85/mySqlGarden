@@ -13,15 +13,127 @@
     background-color: green;
     margin:0 auto;
 }
+
+.smallStem0{
+    height:0px;
+}
+
+.smallStem1{
+    height:5px;
+}
+
+.smallStem2{
+    height:10px;
+}
+
+.smallStem3{
+    height:15px;
+}
+
+.smallStem4{
+    height:20px;
+}
+
+.smallStem5{
+    height:25px;
+}
+
+.smallStem6{
+    height:30px;
+}
+
+.smallStem7{
+    height:35px;
+}
+
+.smallStem8{
+    height:40px;
+}
+
+.smallStem9{
+    height:45px;
+}
+
+.smallStem10{
+    height:50px;
+}
+
+.smallStem11{
+    height:55px;
+}
+
+.smallStem12{
+    height:60px;
+}
+
+.smallStem13{
+    height:65px;
+}
+
+.smallStem14{
+    height:70px;
+}
+
+.smallStem15{
+    height:75px;
+}
+
+.smallStem16{
+    height:80px;
+}
+
+.smallStem17{
+    height:85px;
+}
+
+.smallStem18{
+    height:90px;
+}
+
+.smallStem19{
+    height:95px;
+}
+
 .smallFruit {
     position:absolute;
     top:30px;
-    display:inline-block;
+    display:none;
     width:25px;
     height:25px;
     border-radius:50px;
     background-color:salmon;
 }
+
+.smallFruit21 {
+    display:inline-block;
+    width:5px;
+    height:5px;
+}
+
+.smallFruit22 {
+    display:inline-block;
+    width:10px;
+    height:10px;
+}
+
+.smallFruit23 {
+    display:inline-block;
+    width:15px;
+    height:15px;
+}
+
+.smallFruit24 {
+    display:inline-block;
+    width:20px;
+    height:20px;
+}
+
+.smallFruit25 {
+    display:inline-block;
+    width:25px;
+    height:25px;
+}
+
 .smallPot {
     width: 100px;
     height: 100px;
@@ -42,16 +154,126 @@
     background-color: green;
     margin:0 auto;
 }
+
+.bigStem0{
+    height:0px;
+}
+
+.bigStem1{
+    height:20px;
+}
+
+.bigStem2{
+    height:40px;
+}
+
+.bigStem3{
+    height:60px;
+}
+
+.bigStem4{
+    height:80px;
+}
+
+.bigStem5{
+    height:100px;
+}
+
+.bigStem6{
+    height:120px;
+}
+
+.bigStem7{
+    height:140px;
+}
+
+.bigStem8{
+    height:160px;
+}
+
+.bigStem9{
+    height:180px;
+}
+
+.bigStem10{
+    height:200px;
+}
+
+.bigStem11{
+    height:220px;
+}
+
+.bigStem12{
+    height:240px;
+}
+
+.bigStem13{
+    height:260px;
+}
+
+.bigStem14{
+    height:280px;
+}
+
+.bigStem15{
+    height:300px;
+}
+
+.bigStem16{
+    height:320px;
+}
+
+.bigStem17{
+    height:340px;
+}
+
+.bigStem18{
+    height:360px;
+}
+
+.bigStem19{
+    height:280px;
+}
+
 .bigFruit {
     position:absolute;
     top:120px;
-    display:inline-block;
+    display:none;
     width:100px;
     height:100px;
     border-radius:50px;
     background-color:salmon;
 }
 
+.bigFruit21 {
+    display:inline-block;
+    width:20px;
+    height:20px;
+}
+
+.bigFruit22 {
+    display:inline-block;
+    width:40px;
+    height:40px;
+}
+
+.bigFruit23 {
+    display:inline-block;
+    width:60px;
+    height:60px;
+}
+
+.bigFruit24 {
+    display:inline-block;
+    width:80px;
+    height:80px;
+}
+
+.bigFruit25 {
+    display:inline-block;
+    width:100px;
+    height:100px;
+}
 
 .bigPot {
     width: 200px;
