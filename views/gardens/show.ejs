@@ -1,5 +1,5 @@
 <h1 class = 'text-center'>Check out this sweet <%= plant.name %>!</h1>
-<div class = 'bigPlant'><div class = 'bigStem'></div><div class = 'bigFruit <%= plant.color %>'></div><div class = 'text-center bigPot'><p><%= plant.name %></p></div></div>
+<div class = 'bigPlant'><div class = 'bigStem bigStem<%= plant.water %>'></div><div class = 'bigFruit  bigFruit<%= plant.water %> <%= plant.color %>'></div><div class = 'text-center bigPot'><p><%= plant.name %></p></div></div>
 <h3 class = 'text-center'>
     <% if (plant.edible)  { %>
         Delicious!

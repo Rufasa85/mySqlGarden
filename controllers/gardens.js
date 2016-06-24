@@ -30,7 +30,7 @@ router.post('/new', function(req,res) {
 
 router.get('/:id', function(req,res) {
     db.plant.findById(req.params.id).then(function(plant){
-        console.log('water:',    plant.water)
+        console.log('water:', plant.water)
         res.render('gardens/show',{plant:plant});
     })
 })
