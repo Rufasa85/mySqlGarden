@@ -2,3 +2,4 @@
 <% plants.forEach(function(plant){ %>
     <a href = '/garden/<%= plant.id %>'><div class = 'smallPlant'><div class = 'smallStem smallStem<%= plant.water %>'></div><div class = 'smallFruit smallFruit<%= plant.water %>  <%= plant.color %>'></div><div class = 'text-center smallPot'><p><%= plant.name %></p></div></div></a>
 <% })  %>
+<button>Filter</button>
