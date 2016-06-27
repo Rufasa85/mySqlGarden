@@ -2,7 +2,16 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 var db = require('./models/');
-var gardenController = require('./controllers/gardens.js')
+var gardenController = require('./controllers/gardens.js');
+
+var mysql = require('mysql');
+
+var connection = mysql.createConnection({
+  host     : process.env.RDS_HOSTNAME,
+  user     : process.env.RDS_USERNAME,
+  password : process.env.RDS_PASSWORD,
+  port     : process.env.RDS_PORT
+});
 
 var ejsLayouts = require('express-ejs-layouts');
 app.use(ejsLayouts);
