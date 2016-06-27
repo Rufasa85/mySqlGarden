@@ -4,9 +4,69 @@ var db = require('../models');
 var request = require('request');
 
 router.get('/', function(req,res) {
-    db.plant.findAll().then(function(plants) {
-        res.render('gardens/index', {plants:plants});
-    })
+    var lowerCasedName = req.query.name.toLowerCase();
+    if(lowerCasedName || req.query.color) {
+        var filterPlants = [];
+        if(lowerCasedName) {
+            db.plant.findAll({
+                where:{
+                    name: {
+                        $like: '%' + lowerCasedName + '%'
+                    }
+                }
+            }).then(function(plants) {
+                if(req.query.color) {
+                    if(typeof req.query.color === 'array'){
+                        for (var i = 0; i < plants.length; i++) {
+                            for (var j = 0; j < req.query.color.length; j++) {
+                                if(plants[i].color === req.query.color[j]) {
+                                    filterPlants.push(plants[i]);
+
+                                }
+                            }
+                        }
+                        res.send(filterPlants);
+                    }
+                    else {
+                        for (var i = 0; i < plants.length; i++) {
+                            if (plants[i].color === req.query.color) {
+                                filterPlants.push(plants[i]);
+                            }
+                        }
+                        res.send(filterPlants);
+                    }
+                }
+                else{
+                    res.send(plants);
+                }
+            })
+        }
+        else if(req.query.color) {
+            if (typeof req.query.color === 'array') {
+                db.plant.findAll().then(function(plants) {
+                    for (var i = 0; i < plants.length; i++) {
+                        for (var j = 0; j < req.query.color.length; j++) {
+                            if(plants[i].color === req.query.color[j]) {
+                                filterPlants.push(plants[i]);
+                            }
+                        }
+                    }
+                    res.send(filterPlants);
+                })
+            }
+            else {
+                db.plant.findAll({where:{color: req.query.color}}).then(function(plants) {
+                    res.send(plants);
+                })
+            }
+        }
+        // res.send(req.query);
+    }
+    else {
+        db.plant.findAll().then(function(plants) {
+            res.render('gardens/index', {plants:plants});
+        })
+    }
 })
 
 router.get('/new', function(req, res) {
