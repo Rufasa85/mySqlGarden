@@ -11,7 +11,7 @@ var db        = {};
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else if (env = 'production'){
-  var sequelize = new Sequelize('aahhlz09vf8e8f.crgi7nvmv9ny.us-west-2.rds.amazonaws.com:3306' {
+  var sequelize = new Sequelize('aahhlz09vf8e8f.crgi7nvmv9ny.us-west-2.rds.amazonaws.com:3306', {
     dialect: 'mysql'
   });
 } else {
