@@ -12,13 +12,5 @@
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
-  },
-  "production": {
-    "username": "master",
-    "password": "lumpsuckerz1",
-    "database": "ebdb",
-    "host": "aahhlz09vf8e8f.crgi7nvmv9ny.us-west-2.rds.amazonaws.com",
-    "port": "3306",
-    "dialect": "mysql"
   }
 }
