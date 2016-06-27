@@ -28,7 +28,7 @@ router.get('/', function(req,res) {
                                 }
                             }
                         }
-                        res.send(filterPlants);
+                        res.render('gardens/index', {plants:filterPlants});
                     }
                     else {
                         for (var i = 0; i < plants.length; i++) {
@@ -36,11 +36,11 @@ router.get('/', function(req,res) {
                                 filterPlants.push(plants[i]);
                             }
                         }
-                        res.send(filterPlants);
+                        res.render('gardens/index', {plants:filterPlants});
                     }
                 }
                 else{
-                    res.send(plants);
+                    res.render('gardens/index', {plants:plants});
                 }
             })
         }
@@ -54,12 +54,12 @@ router.get('/', function(req,res) {
                             }
                         }
                     }
-                    res.send(filterPlants);
+                    res.render('gardens/index', {plants:filterPlants});
                 })
             }
             else {
                 db.plant.findAll({where:{color: req.query.color}}).then(function(plants) {
-                    res.send(plants);
+                    res.render('gardens/index', {plants:plants});
                 })
             }
         }
