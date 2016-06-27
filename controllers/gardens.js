@@ -4,7 +4,10 @@ var db = require('../models');
 var request = require('request');
 
 router.get('/', function(req,res) {
-    var lowerCasedName = req.query.name.toLowerCase();
+    var lowerCasedName;
+    if (req.query.name) {
+        lowerCasedName = req.query.name.toLowerCase();
+    }
     if(lowerCasedName || req.query.color) {
         var filterPlants = [];
         if(lowerCasedName) {
