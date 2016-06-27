@@ -3,7 +3,7 @@
     "username": "root",
     "password": "bocacho1",
     "database": "mysqlgarden",
-    "host": "127.0.0.1",
+    "host": "aahhlz09vf8e8f.crgi7nvmv9ny.us-west-2.rds.amazonaws.com",
     "dialect": "mysql"
   },
   "test": {
