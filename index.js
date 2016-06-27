@@ -17,4 +17,4 @@ app.get('/', function(req, res) {
 
 app.use('/garden', gardenController);
 
-app.listen(3000);
+app.listen(PORT || 3000);
