@@ -14,6 +14,9 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "RDS_HOSTNAME",
+    "username": "master",
+    "password": "lumpsuckerz1",
+    "host": "aa36xhyqwi51j1.crgi7nvmv9ny.us-west-2.rds.amazonaws.com",
+    "dialect": "mysql"
   }
 }
