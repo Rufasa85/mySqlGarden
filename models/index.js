@@ -11,11 +11,7 @@ var db        = {};
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
 } else if (env = 'production'){
-  var sequelize = new Sequelize("ebdb", process.env.RDB_USERNAME, process.env.RDB_PASSWORD, {
-    host: process.env.HOSTNAME,
-    port:process.env.PORT,
-    dialect: 'mysql'
-  });
+  var sequelize = new Sequelize('aahhlz09vf8e8f.crgi7nvmv9ny.us-west-2.rds.amazonaws.com:3306');
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
