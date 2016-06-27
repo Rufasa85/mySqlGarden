@@ -1,5 +1,32 @@
-<h1 class='text-center'>What a beautiful garden!</h1>
+<h1 class='text-center'>What a beautiful garden! <button type="button" class="btn btn-default" id = 'routeFilter'>Filter Plants</button></h1>
+<div hidden id = 'filterBox'>
+    <form action="" method="GET" role="form">
+        <div class="form-group">
+            <label for="name">Plant Name</label>
+            <input type="text" class="form-control" id="name" name = "name" placeholder="Plant name">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="color" value="green">green</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="color" value="red">red</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="color" value="orange">orange</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="color" value="yellow">yellow</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="color" value="brown">brown</label>
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox" name="color" value="violet">purple</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<br>
 <% plants.forEach(function(plant){ %>
     <a href = '/garden/<%= plant.id %>'><div class = 'smallPlant'><div class = 'smallStem smallStem<%= plant.water %>'></div><div class = 'smallFruit smallFruit<%= plant.water %>  <%= plant.color %>'></div><div class = 'text-center smallPot'><p><%= plant.name %></p></div></div></a>
 <% })  %>
-<button>Filter</button>
